@@ -45,10 +45,6 @@
 } */
 
 
-@font-face {
-    font-family: "bold";
-    src: url(../fuente/bold.otf);
-}
 
 
 text{
@@ -171,7 +167,6 @@ video {
     scrollbar-width: none;
     &_contenedor{
         margin-top: 5vh;
-        width: 100vw;
         background-color: $gris-blur;
     }
     &::-webkit-scrollbar{
@@ -237,9 +232,12 @@ video {
    
 }
 
-$ancho_index_desktop: 85vw;
 
 @media (min-width: 600px) {
+    .btn_noticias{
+       display: flex;
+      justify-content: center;
+    }
     body{
         overflow-x: hidden;
     }
@@ -250,7 +248,7 @@ $ancho_index_desktop: 85vw;
         font-size: 2rem;
     }
     .noticias{
-        width: $ancho_index_desktop;
+        width: calc(85vw - 8rem);
         height: 47vh;
         overflow: hidden;
         grid-template-columns: repeat(4,20vw);
@@ -273,7 +271,7 @@ $ancho_index_desktop: 85vw;
             height: 20vh;
         }
     }
-        .carrusel_nav{
+ /*        .carrusel_nav{
         display: flex;
         column-gap: 1rem;
         position: absolute;
@@ -290,11 +288,11 @@ $ancho_index_desktop: 85vw;
             display: block;
             position: relative;
         }
-    }
+    } */
     .carrusel_contenedor{
-        
-        width: $ancho_index_desktop;
-        margin-left: 5vw;
+        margin: 0 auto;
+        width: calc(85vw - 8rem);
+
         border-radius: 25px;
     }
     .sponsors{
@@ -310,8 +308,7 @@ $ancho_index_desktop: 85vw;
        
     }
     .parrafo_index{
-        width: $ancho_index_desktop;
-        margin-left: 5vw;
+        width: calc(85vw - 8rem);
 
     }
 }
